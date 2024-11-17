@@ -36,6 +36,16 @@ services:
       - 4002:4002
     volumes:
       - ./services/inventory:/app
+      - "/app/node_modules"
+    develop:
+      watch:
+        - action: sync
+          path: ./services/inventory/src
+          target: /app/src
+          ignore:
+            - ./services/inventory/node_modules/
+        - action: rebuild
+          path: ./services/inventory/package.json
     command: yarn run dev
 
 volumes:

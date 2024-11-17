@@ -15,6 +15,12 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 
+app.get("/health", (req: Request, res: Response, next: NextFunction) => {
+  res.status(200).json({
+    message: "Server is running",
+  });
+});
+
 app.use((_req: Request, _res: Response, _next: NextFunction) => {
   _res.status(404).json({
     message: "Not found",
