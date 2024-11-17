@@ -17,8 +17,8 @@ This project is a Node.js microservice built with **Prisma ORM** for database ma
 
 Before running this project, ensure you have the following installed:
 
-1. **Node.js** (v16 or higher)
-2. **Docker** (v20 or higher)
+1. **Node.js** (v20)
+2. **Docker**
 3. **Docker Compose**
 4. **Prisma CLI**
 
@@ -33,11 +33,11 @@ git clone https://github.com/tajul-islam-refath/ecom_microservice.git
 cd ecom_microservice
 ```
 
-# Server Configuration
+# Each service Configuration
 
 ```bash
 PORT=3000
-NODE_ENV=development
+SERVICE_NAME=example
 DATABASE_URL=postgresql://user:password@localhost:5432/dbname
 ```
 
